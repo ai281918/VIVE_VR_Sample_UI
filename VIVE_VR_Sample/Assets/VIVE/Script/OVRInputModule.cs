@@ -598,7 +598,6 @@ namespace UnityEngine.EventSystems
                 if (graphicRect != null)
                 {
                     Vector3 worldPos = raycast.worldPosition;
-                    print(Vector3.Distance(worldPos, rightControllerPointer.transform.position));
                     if(Vector3.Distance(worldPos, rightControllerPointer.transform.position) > maxDistance){
                         rightControllerPointer.psEnable = false;
                         leftData.scrollDelta = Vector2.zero;

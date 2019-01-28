@@ -11,6 +11,11 @@ public class Test : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		print(VIVEControllers.instance.R_trackpadScrollValue);
+		print(VIVEControllers.instance.L_trackpadScrollValue);
+		if(VIVEControllers.instance.L_trackpadDown){
+			print("L_trackpadDown");
+		}
+		print(VIVEControllers.instance.R_triggerValue);
+		print(VIVEControllers.instance.L_triggerValue);
 	}
 }

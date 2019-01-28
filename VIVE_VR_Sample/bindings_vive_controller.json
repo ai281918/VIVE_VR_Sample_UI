@@ -224,9 +224,6 @@
                "inputs" : {
                   "position" : {
                      "output" : "/actions/default/in/trackpadtouchaxis"
-                  },
-                  "touch" : {
-                     "output" : "/actions/default/in/trackpadtouch"
                   }
                },
                "mode" : "trackpad",
@@ -240,6 +237,11 @@
                "inputs" : {},
                "mode" : "none",
                "path" : "/user/hand/left/input/trackpad"
+            },
+            {
+               "inputs" : {},
+               "mode" : "none",
+               "path" : "/user/hand/left/input/grip"
             }
          ]
       },
@@ -286,7 +288,7 @@
    },
    "controller_type" : "vive_controller",
    "description" : "",
-   "name" : "vive_controller",
+   "name" : "VIVE_UGUI",
    "options" : {
       "mirror_actions" : false
    },
