@@ -151,7 +151,6 @@ public class VIVEControllers : MonoBehaviour{
 		if(Mathf.Abs(L_trackpadTouchAxis.x) < 0.1f && Mathf.Abs(L_trackpadTouchAxis.y) < 0.1f){
 			_L_trackpadScrollValue = 0f;
 			L_trackpadFirstScroll = true;
-			print("!");
 			return;
 		}
 
