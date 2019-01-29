@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4011397403103530}
   - component: {fileID: 114664279098956780}
   - component: {fileID: 198222183369834366}
+  - component: {fileID: 114505586993757488}
   - component: {fileID: 199582046426610912}
   m_Layer: 0
   m_Name: Pointer
@@ -42,6 +43,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+--- !u!114 &114505586993757488
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1954359335890234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9f8c100f41e30248bc1b16cd617c479, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSystem: {fileID: 0}
+  VREventSystem: {fileID: 0}
 --- !u!114 &114664279098956780
 MonoBehaviour:
   m_ObjectHideFlags: 1
