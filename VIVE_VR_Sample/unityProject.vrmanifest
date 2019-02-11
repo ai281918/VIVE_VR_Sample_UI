@@ -5,6 +5,7 @@
       "app_key": "application.generated.unity.vive_vr_sample.exe",
       "launch_type": "url",
       "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\Owner\\Desktop\\VIVE_VR_Sample_UI\\VIVE_VR_Sample\\actions.json",
       "strings": {
         "en_us": {
           "name": "VIVE_VR_Sample [Testing]"

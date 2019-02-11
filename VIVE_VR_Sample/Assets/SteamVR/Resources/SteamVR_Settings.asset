@@ -20,3 +20,4 @@ MonoBehaviour:
   poseUpdateMode: 8
   activateFirstActionSetOnStart: 1
   editorAppKey: application.generated.unity.vive_vr_sample.exe
+  autoEnableVR: 1
