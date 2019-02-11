@@ -34,37 +34,38 @@ public class VIVEControllers : MonoBehaviour{
 
 	public bool R_triggerDown{
 		get{
-			return SteamVR_Input._default.inActions.InteractUI.GetStateDown(SteamVR_Input_Sources.RightHand);
+			return SteamVR_Input.GetStateDown("InteractUI",SteamVR_Input_Sources.RightHand);
 		}
 	}
 
 	public bool L_triggerDown{
 		get{
-			return SteamVR_Input._default.inActions.InteractUI.GetStateDown(SteamVR_Input_Sources.LeftHand);
+			return SteamVR_Input.GetStateDown("InteractUI",SteamVR_Input_Sources.LeftHand);
+
 		}
 	}
 
 	public bool R_triggerUp{
 		get{
-			return SteamVR_Input._default.inActions.InteractUI.GetStateUp(SteamVR_Input_Sources.RightHand);
+			return SteamVR_Input.GetStateUp("InteractUI",SteamVR_Input_Sources.RightHand);
 		}
 	}
 
 	public bool L_triggerUp{
 		get{
-			return SteamVR_Input._default.inActions.InteractUI.GetStateUp(SteamVR_Input_Sources.LeftHand);
+			return SteamVR_Input.GetStateUp("InteractUI",SteamVR_Input_Sources.LeftHand);
 		}
 	}
 
 	public float R_triggerValue{
 		get{
-			return SteamVR_Input._default.inActions.Squeeze.GetAxis(SteamVR_Input_Sources.RightHand) > 0.05 ? SteamVR_Input._default.inActions.Squeeze.GetAxis(SteamVR_Input_Sources.RightHand) : 0;
+			return SteamVR_Input.GetFloat("Squeeze", SteamVR_Input_Sources.RightHand) > 0.05 ? SteamVR_Input.GetFloat("Squeeze", SteamVR_Input_Sources.RightHand) : 0;
 		}
 	}
 
 	public float L_triggerValue{
 		get{
-			return SteamVR_Input._default.inActions.Squeeze.GetAxis(SteamVR_Input_Sources.LeftHand) > 0.05 ? SteamVR_Input._default.inActions.Squeeze.GetAxis(SteamVR_Input_Sources.LeftHand) : 0;
+			return SteamVR_Input.GetFloat("Squeeze", SteamVR_Input_Sources.LeftHand) > 0.05 ? SteamVR_Input.GetFloat("Squeeze", SteamVR_Input_Sources.LeftHand) : 0;
 		}
 	}
 
@@ -79,19 +80,19 @@ public class VIVEControllers : MonoBehaviour{
 
 	public bool R_trackpadDown{
 		get{
-			return SteamVR_Input._default.inActions.Teleport.GetStateDown(SteamVR_Input_Sources.RightHand);
+			return SteamVR_Input.GetStateDown("Teleport", SteamVR_Input_Sources.RightHand);
 		}
 	}
 
 	public bool R_trackpadUp{
 		get{
-			return SteamVR_Input._default.inActions.Teleport.GetStateUp(SteamVR_Input_Sources.RightHand);
+			return SteamVR_Input.GetStateUp("Teleport", SteamVR_Input_Sources.RightHand);
 		}
 	}
 
 	public Vector2 R_trackpadTouchAxis{
 		get{
-			return SteamVR_Input._default.inActions.TrackpadTouchAxis.GetAxis(SteamVR_Input_Sources.RightHand);
+			return SteamVR_Input.GetVector2("TrackpadTouchAxis", SteamVR_Input_Sources.RightHand);
 		}
 	}
 
@@ -124,19 +125,19 @@ public class VIVEControllers : MonoBehaviour{
 
 	public bool L_trackpadDown{
 		get{
-			return SteamVR_Input._default.inActions.Teleport.GetStateDown(SteamVR_Input_Sources.LeftHand);
+			return SteamVR_Input.GetStateDown("Teleport", SteamVR_Input_Sources.LeftHand);
 		}
 	}
 
 	public bool L_trackpadUp{
 		get{
-			return SteamVR_Input._default.inActions.Teleport.GetStateUp(SteamVR_Input_Sources.LeftHand);
+			return SteamVR_Input.GetStateUp("Teleport", SteamVR_Input_Sources.LeftHand);
 		}
 	}
 
 	public Vector2 L_trackpadTouchAxis{
 		get{
-			return SteamVR_Input._default.inActions.TrackpadTouchAxis.GetAxis(SteamVR_Input_Sources.LeftHand);
+			return SteamVR_Input.GetVector2("TrackpadTouchAxis", SteamVR_Input_Sources.LeftHand);
 		}
 	}
 
@@ -170,25 +171,54 @@ public class VIVEControllers : MonoBehaviour{
 	**************************************/
 	public bool R_gripGrabDown{
 		get{
-			return SteamVR_Input._default.inActions.GrabGrip.GetStateDown(SteamVR_Input_Sources.RightHand);
+			return SteamVR_Input.GetStateDown("GrabGrip", SteamVR_Input_Sources.RightHand);
 		}
 	}
 
 	public bool R_gripGrabUp{
 		get{
-			return SteamVR_Input._default.inActions.GrabGrip.GetStateUp(SteamVR_Input_Sources.RightHand);
+			return SteamVR_Input.GetStateUp("GrabGrip", SteamVR_Input_Sources.RightHand);
 		}
 	}
 
 	public bool L_gripGrabDown{
 		get{
-			return SteamVR_Input._default.inActions.GrabGrip.GetStateDown(SteamVR_Input_Sources.LeftHand);
+			return SteamVR_Input.GetStateDown("GrabGrip", SteamVR_Input_Sources.LeftHand);
 		}
 	}
 
 	public bool L_gripGrabUp{
 		get{
-			return SteamVR_Input._default.inActions.GrabGrip.GetStateUp(SteamVR_Input_Sources.LeftHand);
+			return SteamVR_Input.GetStateUp("GrabGrip", SteamVR_Input_Sources.LeftHand);
+		}
+	}
+
+	/*************************************
+	     ∧___∧                     ∧_＿∧
+	  （　・∀・）    Pointer    	  （´∀｀　）
+	 （　　　　つ				  ⊂　　　　）
+	**************************************/
+	public Vector3 L_hitPosition{
+		get{
+			return new Vector3();
+		}
+	}
+
+	public Vector3 R_hitPosition{
+		get{
+			return new Vector3();
+		}
+	}
+
+	public GameObject L_hitObject{
+		get{
+			return new GameObject();
+		}
+	}
+
+	public GameObject R_hitObject{
+		get{
+			return new GameObject();
 		}
 	}
 }
