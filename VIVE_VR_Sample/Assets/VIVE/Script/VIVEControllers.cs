@@ -212,13 +212,13 @@ public class VIVEControllers : MonoBehaviour{
 
 	public GameObject L_hitObject{
 		get{
-			return new GameObject();
+			return null;
 		}
 	}
 
 	public GameObject R_hitObject{
 		get{
-			return new GameObject();
+			return null;
 		}
 	}
 }

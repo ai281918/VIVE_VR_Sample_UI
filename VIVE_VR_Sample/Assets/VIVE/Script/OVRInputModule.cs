@@ -585,7 +585,10 @@ namespace UnityEngine.EventSystems
 
             OVRRaycaster ovrRaycaster = raycast.module as OVRRaycaster;
             // We're only interested in intersections from OVRRaycasters
-            if (ovrRaycaster) 
+            if(ovrRaycaster && raycast.gameObject.GetComponent<MaskableGraphic>() && !raycast.gameObject.GetComponent<MaskableGraphic>().raycastTarget){
+                print("!!!");
+            }
+            if (ovrRaycaster && !(raycast.gameObject.GetComponent<MaskableGraphic>() && !raycast.gameObject.GetComponent<MaskableGraphic>().raycastTarget)) 
             {
                 // The Unity UI system expects event data to have a screen position
                 // so even though this raycast came from a world space ray we must get a screen
