@@ -1030,7 +1030,7 @@ namespace Valve.VR
         /// <returns>True when the action was true last update and is now false. Returns false again afterwards.</returns>
         public static bool GetStateUp(string action, SteamVR_Input_Sources inputSource, bool caseSensitive = false)
         {
-            return GetStateDown(null, action, inputSource, caseSensitive);
+            return GetStateUp(null, action, inputSource, caseSensitive);
         }
         #endregion
 
