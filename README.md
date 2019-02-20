@@ -1,4 +1,4 @@
-## VIVE Unity uGUI SDK
+# VIVE Unity uGUI SDK
 This package is modified from [Oculus Unity SDK](https://developer.oculus.com/downloads/
 ). 
 Use the right controller of HTC VIVE as mouse to interact with uGUI.
@@ -19,7 +19,8 @@ SteamVR version : SteamVR 2.2
 - Import VIVE_VR.unitypackage. (download from release page)
 - Drag the [VIVE Pointer] prefab to Controller (right).
 
-![](https://i.imgur.com/A2ux14b.png)
+![](https://i.imgur.com/davoVjC.png)
+
 - Create a Canvas and change the render mode to World Space.
 - Set scale to (0.01, 0.01, 0.01) and position to (0, 0, 3).
 - Assign the Camera (under the [CameraRig]) to Event Camera.
@@ -32,3 +33,5 @@ SteamVR version : SteamVR 2.2
 - Assign Pointer to OVRInputModule (RightController & RayAnchor)
 
 ![](https://i.imgur.com/TF82yBs.png)
+
+###### tags: `Unity`
