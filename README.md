@@ -5,7 +5,7 @@ Use the right controller of HTC VIVE as mouse to interact with uGUI.
 
 ## Requirement
 Unity version : Unity 2018.2.18f1
-SteamVR version : SteamVR 2.0
+SteamVR version : SteamVR 2.2
 
 ## Getting Started
 - Create a basic VIVE environment.
@@ -17,7 +17,7 @@ SteamVR version : SteamVR 2.0
 ![](https://i.imgur.com/MHptIQ7.png)
 ![](https://i.imgur.com/t67AmKs.png)
 - Import VIVE_VR.unitypackage. (download from release page)
-- Drag the Pointer prefab to Controller (right).
+- Drag the [VIVE Pointer] prefab to Controller (right).
 
 ![](https://i.imgur.com/A2ux14b.png)
 - Create a Canvas and change the render mode to World Space.
@@ -32,6 +32,3 @@ SteamVR version : SteamVR 2.0
 - Assign Pointer to OVRInputModule (RightController & RayAnchor)
 
 ![](https://i.imgur.com/TF82yBs.png)
-- Assign EventSystem and VREventSystem to Pointer
-
-![](https://i.imgur.com/M0LsuT0.png)

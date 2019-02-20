@@ -1,9 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class InputManager : MonoBehaviour {
-	public GameObject eventSystem, VREventSystem;
+	GameObject eventSystem, VREventSystem;
+
+	void Awake()
+	{
+		try{
+			eventSystem = GameObject.FindObjectOfType<UnityEngine.EventSystems.StandaloneInputModule>().gameObject;
+		}
+		catch(Exception e){
+			eventSystem = new GameObject("EventSystem");
+			eventSystem.AddComponent<UnityEngine.EventSystems.EventSystem>();
+			eventSystem.AddComponent<UnityEngine.EventSystems.StandaloneInputModule>();
+		}
+		try{
+			VREventSystem = GameObject.FindObjectOfType<UnityEngine.EventSystems.OVRInputModule>().gameObject;
+		}
+		catch(Exception e){
+			VREventSystem = new GameObject("VREventSystem");
+			VREventSystem.AddComponent<UnityEngine.EventSystems.EventSystem>();
+			VREventSystem.AddComponent<UnityEngine.EventSystems.OVRInputModule>();
+			VREventSystem.GetComponent<UnityEngine.EventSystems.OVRInputModule>().controllerPointer = GameObject.FindObjectOfType<VIVEPointer>();
+			VREventSystem.GetComponent<UnityEngine.EventSystems.OVRInputModule>().rayAnchor = GameObject.FindObjectOfType<VIVEPointer>().transform;
+		}
+	}
 
 	void Start()
 	{

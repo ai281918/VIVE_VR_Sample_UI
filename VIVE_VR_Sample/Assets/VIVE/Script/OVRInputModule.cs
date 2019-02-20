@@ -33,7 +33,7 @@ namespace UnityEngine.EventSystems
     {
         #region modified for VIVE
         
-        public VIVEPointer rightControllerPointer;
+        public VIVEPointer controllerPointer;
         public Transform rayAnchor;
         public float maxDistance = 100f;
         public float scrollSensitivity = 1f;
@@ -601,18 +601,18 @@ namespace UnityEngine.EventSystems
                 if (graphicRect != null)
                 {
                     Vector3 worldPos = raycast.worldPosition;
-                    if(Vector3.Distance(worldPos, rightControllerPointer.transform.position) > maxDistance){
-                        rightControllerPointer.psEnable = false;
+                    if(Vector3.Distance(worldPos, controllerPointer.transform.position) > maxDistance){
+                        controllerPointer.psEnable = false;
                         leftData.scrollDelta = Vector2.zero;
                     }
                     else{
-                        rightControllerPointer.psEnable = true;
-                        rightControllerPointer.SetPointLine(worldPos);
+                        controllerPointer.psEnable = true;
+                        controllerPointer.SetPointLine(worldPos);
                     }
                 }
             }
             else{
-                rightControllerPointer.psEnable = false;
+                controllerPointer.psEnable = false;
             }
 
             // Stick default data values in right and middle slots for compatability
@@ -780,7 +780,7 @@ namespace UnityEngine.EventSystems
         protected PointerEventData.FramePressState GetGazeButtonState()
         {
             bool pressed = false, released = false;
-            if(rightControllerPointer.psEnable){
+            if(controllerPointer.psEnable){
                 pressed = VIVEControllers.instance.R_triggerDown;
                 released = VIVEControllers.instance.R_triggerUp;
             }
