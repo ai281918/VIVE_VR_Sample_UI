@@ -69,6 +69,26 @@ namespace UnityEngine.EventSystems
         protected OVRInputModule()
         {}
 
+        void Start()
+        {
+            if(controllerPointer == null){
+                try{
+                    controllerPointer = GameObject.FindObjectOfType<VIVEPointer>();
+                }
+                catch(Exception e){
+                    Debug.LogError("Can not find VIVEPointer.");
+                }
+            }
+            if(rayAnchor == null){
+                try{
+			    rayAnchor = GameObject.FindObjectOfType<VIVEPointer>().transform;
+                }
+                catch(Exception e){
+                    Debug.LogError("Can not find VIVEPointer.");
+                }
+            }
+        }
+
         void Reset()
         {
             allowActivationOnMobileDevice = true;

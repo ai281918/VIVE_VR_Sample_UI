@@ -61,6 +61,18 @@ public class OVRRaycaster : GraphicRaycaster, IPointerEnterHandler
         }
     }
 
+    void Start()
+    {
+        if(pointer == null){
+            try{
+                pointer = GameObject.FindObjectOfType<VIVEPointer>().gameObject;
+            }
+            catch(Exception e){
+                Debug.LogError("Can not Find VIVE Pointer.");
+            }
+        }
+    }
+
 
     /// <summary>
     /// For the given ray, find graphics on this canvas which it intersects and are not blocked by other
