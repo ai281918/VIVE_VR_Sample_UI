@@ -315,7 +315,9 @@ public class OVRRaycaster : GraphicRaycaster, IPointerEnterHandler
         {
             // Gaze has entered this canvas. We'll make it the active one so that canvas-mouse pointer can be used.
             OVRInputModule inputModule = EventSystem.current.currentInputModule as OVRInputModule;
-            inputModule.activeGraphicRaycaster = this;
+            if(inputModule != null){
+                inputModule.activeGraphicRaycaster = this;
+            }
         }
     }
 }
